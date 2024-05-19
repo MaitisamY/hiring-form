@@ -14,7 +14,7 @@
     </div>
     <div class="container">
         <h2>New Hire Check List</h2>
-        <form id="hireForm">
+        <form id="hireForm" action="./submit.php" method="POST">
 
             <div class="one-col">
                 <div class="input-group">
@@ -67,7 +67,6 @@
             <div class="one-col">
                 <label class="large">Shirt Size:</label>
             </div>
-
             <div class="two-col">
                 <div class="input-group">
                     <label class="light" for="collaredShirt">Collared Shirt:</label>
@@ -265,11 +264,10 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>What subaccounts (email):</label><br>
-                <label class="checkbox-inline"><input type="checkbox" name="subaccounts[]" value="Electrical Service"> Electrical Service</label>
-                <label class="checkbox-inline"><input type="checkbox" name="subaccounts[]" value="LV Service"> LV Service</label>
-                <label class="checkbox-inline"><input type="checkbox" name="subaccounts[]" value="Warranty"> Warranty</label>
+            <div class="one-col">
+                <div class="input-group">
+                    <label class="large">What subaccounts (email):</label>
+                </div>
             </div>
 
             <div class="form-group">
@@ -397,10 +395,34 @@
             
         </form>
     </div>
-    <!-- jQuery and Bootstrap JS CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="popup" class="popup"></div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="scripts.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            function getQueryParams() {
+                const params = new URLSearchParams(window.location.search);
+                const success = params.get('success');
+                const error = params.get('error');
+                return { success, error };
+            }
+
+            function showPopup(message, type) {
+                const popup = document.getElementById('popup');
+                popup.textContent = message;
+                popup.classList.add(type);
+                popup.style.display = 'block';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 8000);
+            }
+
+            const queryParams = getQueryParams();
+            if (queryParams.success) {
+                showPopup('Form submitted successfully!', 'popup success');
+            } else if (queryParams.error) {
+                showPopup('There was an error submitting the form.', 'popup error');
+            }
+        });
+    </script>
 </body>
 </html>
