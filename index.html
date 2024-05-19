@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Hire Checklist</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <img src="./logo.jpg" alt="Organization Logo">
+    </div>
+    <div class="container">
+        <h2>New Hire Check List</h2>
+        <form id="hireForm">
+
+            <div class="one-col">
+                <div class="input-group">
+                    <label for="employeeName">Employee Name:</label>
+                    <input type="text" class="custom-input" id="employeeName" name="employeeName" required>
+                </div>
+            </div>
+
+            <div class="one-col">
+                <div class="input-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" class="custom-input" id="startDate" name="startDate" required>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="language">Language:</label>
+                    <select style="padding-bottom: 6px;" class="custom-input" id="language" name="language" required>
+                        <option value="">Please Select</option>
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Bilingual (English/Spanish)">Bilingual (English/Spanish)</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="language">Other language:</label>
+                    <input type="text" class="custom-input" id="languageOther" name="languageOther" placeholder="Please specify">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="directReport">Direct Report (Manager/Supervisor):</label>
+                    <input type="text" class="custom-input" id="directReport" name="directReport">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="custom-input" id="email" name="email">
+                </div>
+            </div>
+
+            <div class="one-col">
+                <label class="large">Shirt Size:</label>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label class="light" for="collaredShirt">Collared Shirt:</label>
+                    <select class="custom-input" id="collaredShirtSize" name="collaredShirtSize">
+                        <option value="">Please Select</option>
+                        <option value="SMALL">SMALL</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                        <option value="LARGE">LARGE</option>
+                        <option value="X-LARGE">X-LARGE</option>
+                        <option value="XX-LARGE">XX-LARGE</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label class="light" for="tShirt">T-Shirt:</label>
+                    <select class="custom-input" id="tShirtSize" name="tShirtSize">
+                        <option value="">Please Select</option>
+                        <option value="SMALL">SMALL</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                        <option value="LARGE">LARGE</option>
+                        <option value="XL">X-LARGE</option>
+                        <option value="XX-LARGE">XX-LARGE</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="license">Electrical/Security License:</label>
+                    <select class="custom-input" id="license" name="license">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="license">Type:</label>
+                    <select class="custom-input" id="licenseType" name="licenseType">
+                        <option value="">Please Select</option>
+                        <option value="Apprentice">Apprentice</option>
+                        <option value="Wireman">Wireman</option>
+                        <option value="Journeyman">Journeyman</option>
+                        <option value="Master">Master</option>
+                        <option value="Security">Security</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="license">License #:</label>
+                    <input style="padding-bottom: 7px;" type="text" class="custom-input" id="licenseNumber" name="licenseNumber">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="license">Expiration Date:</label>
+                    <input type="date" class="custom-input" id="expirationDate" name="expirationDate" placeholder="Expiration Date">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Device type(s) requested:</label><br>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Desktop Dual Screen"> Desktop Dual Screen</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Laptop w/ Docking Station"> Laptop w/ Docking Station</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Cell Phone"> Cell Phone</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="iPad"> iPad</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Ear Buds"> Ear Buds</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Desk Phone"> Desk Phone</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Extension Only"> Extension Only</label>
+                <label class="checkbox-inline"><input type="checkbox" name="device[]" value="Printer"> Printer</label>
+                <div class="one-col">
+                    <div class="input-group">
+                        <label for="deviceOther">Other</label>
+                        <input type="text" class="custom-input" id="deviceOther" name="deviceOther">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Software Required:</label><br>
+                <label class="checkbox-inline"><input type="checkbox" name="software[]" value="Office - Web/Mobile Apps Only"> Office - Web/Mobile Apps Only</label>
+                <label class="checkbox-inline"><input type="checkbox" name="software[]" value="Office - Desktop Apps"> Office - Desktop Apps</label>
+                <label class="checkbox-inline"><input type="checkbox" name="software[]" value="MS Access (CBDD2)"> MS Access (CBDD2)</label>
+                <label class="checkbox-inline"><input type="checkbox" name="software[]" value="Adobe Pro"> Adobe Pro</label>
+                <label class="checkbox-inline"><input type="checkbox" name="software[]" value="Visio"> Visio</label>
+                <label class="checkbox-inline"><input type="checkbox" name="software[]" value="VPN"> VPN</label>
+                <div class="one-col">
+                    <div class="input-group">
+                        <label for="softwareOther">Other</label>
+                        <input type="text" class="custom-input" id="softwareOther" name="softwareOther">
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="workstation">Workstation:</label>
+                    <input type="text" class="custom-input" id="workstation" name="workstation">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="similarEmployee">Similar Employee:</label>
+                    <input type="text" class="custom-input" id="similarEmployee" name="similarEmployee">
+                </div>
+            </div>
+
+            <div class="one-col">
+                <div class="input-group">
+                    <label for="userType">User type in Bolt:</label>
+                    <select class="custom-input" id="userType" name="userType">
+                        <option value="">Please Select</option>
+                        <option value="Acc Receivables">Acc Receivables</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Area Manager">Area Manager</option>
+                        <option value="Area Mgr And Job Creation">Area Mgr And Job Creation</option>
+                        <option value="Billing Coordinator">Billing Coordinator</option>
+                        <option value="Billing Coordinator + Insights Reader">Billing Coordinator + Insights Reader</option>
+                        <option value="COD SERVICE">COD SERVICE</option>
+                        <option value="Contract-Data Entry">Contract-Data Entry</option>
+                        <option value="Crew Member">Crew Member</option>
+                        <option value="Data Entry">Data Entry</option>
+                        <option value="ELECTRIC MISC">ELECTRIC MISC</option>
+                        <option value="Electric Sales">Electric Sales</option>
+                        <option value="Estimating Manager">Estimating Manager</option>
+                        <option value="Estimating Manager + Subcrew pay">Estimating Manager + Subcrew pay</option>
+                        <option value="Job Start">Job Start</option>
+                        <option value="Job Start & Billing">Job Start & Billing</option>
+                        <option value="Job Start_editing communities_Supervisor">Job Start_editing communities_Supervisor</option>
+                        <option value="Lighting Manager">Lighting Manager</option>
+                        <option value="Electric Sales">LV Billing & Job Start</option>
+                        <option value="LV Intaller">LV Intaller</option>
+                        <option value="LV Project Manager">LV Project Manager</option>
+                        <option value="LV Sales">LV Sales</option>
+                        <option value="LV Tech">LV Tech</option>
+                        <option value="LV Warehouse">LV Warehouse</option>
+                        <option value="Non Payroll Admin">Non Payroll Admin</option>
+                        <option value="Payroll Coordinator">Payroll Coordinator</option>
+                        <option value="Sch manager & Subcrew Pay">Sch manager & Subcrew Pay</option>
+                        <option value="Service Tech (no pricing or contracts)">Service Tech (no pricing or contracts)</option>
+                        <option value="Schedule Manager">Schedule Manager</option>
+                        <option value="Service Tech w/ contract view">Service Tech w/ contract view</option>
+                        <option value="Supervisor">Supervisor</option>
+                        <option value="Time Card Only">Time Card Only</option>
+                        <option value="Warehouse">Warehouse</option>
+                        <option value="Warehouse Data Entry">Warehouse Data Entry</option>
+                        <option value="Warehouse Manager">Warehouse Manager</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="personalEmail">Personal email address:</label>
+                    <input type="email" class="custom-input" id="personalEmail" name="personalEmail">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="cellPhone">Cell Phone:</label>
+                    <input type="tel" class="custom-input" id="cellPhone" name="cellPhone">
+                </div>
+            </div>
+
+            <div class="one-col">
+                <label class="large">Emergency Contact:</label>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="emergencyName">Name:</label>
+                    <input type="text" class="custom-input" id="emergencyName" name="emergencyName">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="emergencyMobile">Mobile #:</label>
+                    <input type="tel" class="custom-input" id="emergencyMobile" name="emergencyMobile">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="emergencyRelation">Relation:</label>
+                    <input type="text" class="custom-input" id="emergencyRelation" name="emergencyRelation">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>What subaccounts (email):</label><br>
+                <label class="checkbox-inline"><input type="checkbox" name="subaccounts[]" value="Electrical Service"> Electrical Service</label>
+                <label class="checkbox-inline"><input type="checkbox" name="subaccounts[]" value="LV Service"> LV Service</label>
+                <label class="checkbox-inline"><input type="checkbox" name="subaccounts[]" value="Warranty"> Warranty</label>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Queues:</label><br>
+                <label class="checkbox-inline"><input type="checkbox" name="phoneQueues[]" value="Electrical Service"> Electrical Service</label>
+                <label class="checkbox-inline"><input type="checkbox" name="phoneQueues[]" value="LV Service"> LV Service</label>
+                <label class="checkbox-inline"><input type="checkbox" name="phoneQueues[]" value="Warranty"> Warranty</label>
+            </div>
+
+            <div class="form-group">
+                <label>Websites:</label><br>
+                <label class="checkbox-inline"><input type="checkbox" name="websites[]" value="Bolt"> Bolt</label>
+                <label class="checkbox-inline"><input type="checkbox" name="websites[]" value="Hyphen Solutions"> Hyphen Solutions</label>
+                <label class="checkbox-inline"><input type="checkbox" name="websites[]" value="Invoice"> Invoice</label>
+                <label class="checkbox-inline"><input type="checkbox" name="websites[]" value="CMS"> CMS</label>
+                <label class="checkbox-inline"><input type="checkbox" name="websites[]" value="Alarm.com"> Alarm.com</label>
+                <label class="checkbox-inline"><input type="checkbox" name="websites[]" value="Spectrum"> Spectrum</label>
+            </div>
+
+            <div class="one-col">
+                <label class="large">Fleet:</label>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="fleetCard">Fleet Card needed:</label>
+                    <select class="custom-input" id="fleetCard" name="fleetCard">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="vehicleRequired">Vehicle Required:</label>
+                    <select class="custom-input" id="vehicleRequired" name="vehicleRequired">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="vehicleLease">Vehicle Lease:</label>
+                    <select class="custom-input" id="vehicleLease" name="vehicleLease">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="tollTag">Toll Tag:</label>
+                    <select class="custom-input" id="tollTag" name="tollTag">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="one-col">
+                <label class="large">Facilities:</label>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="facilityKeys">Keys:</label>
+                    <select style="padding-bottom: 6px;" class="custom-input" id="facilityKeys" name="facilityKeys">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="facilityType">Type:</label>
+                    <input type="text" class="custom-input" id="facilityType" name="facilityType">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="alarmAccess">Alarm Access:</label>
+                    <select style="padding-bottom: 6px;" class="custom-input" id="alarmAccess" name="alarmAccess">
+                        <option value="">Please Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="pin">Pin#: (4 digit #)</label>
+                    <input type="text" class="custom-input" id="pin" name="pin">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label for="companyCreditCard">Company Credit Card:</label>
+                    <input type="text" class="custom-input" id="companyCreditCard" name="companyCreditCard">
+                </div>
+            </div>
+            
+            <div class="one-col">
+                <div class="input-group">
+                    <label for="specialRequests">Special Requests or Instructions:</label>
+                    <textarea class="custom-input" id="specialRequests" name="specialRequests" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="button-holder">
+                <button style="width: 30%;" type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    <!-- jQuery and Bootstrap JS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
